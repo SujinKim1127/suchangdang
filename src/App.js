@@ -22,11 +22,15 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #b8e9ff;
-  max-width: 100vw;
+  width: 100%;
 `;
 
 const Img = styled.img`
-  width: 700px;
+  @media screen and (min-width: 780px) {
+    width: 700px;
+  }
+
+  width: 90%;
 `;
 
 export default App;
