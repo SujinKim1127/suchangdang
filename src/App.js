@@ -16,6 +16,16 @@ function App() {
         <Img src={second} />
         <Img src={third} />
         <Img src={fourth} />
+        <FunctionWrapper>
+          <CallBox>
+            <CallTitle>전화 문의</CallTitle>
+            <TelAtag href="tel:02-6953-7550">02-6953-7550</TelAtag>
+          </CallBox>
+          <ReserveBox>
+            <ReserveTitle>온라인 예약</ReserveTitle>
+            <ReserveBtn>바로가기</ReserveBtn>
+          </ReserveBox>
+        </FunctionWrapper>
         <WhiteBox>
           <MapWrapper>
             <MapDiv
@@ -81,6 +91,73 @@ const PosText = styled.span`
   align-items: center;
   margin-top: 20px;
   font-weight: 600;
+`;
+
+const FunctionWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  padding-bottom: 40px;
+`;
+
+const CallBox = styled.div`
+  background-color: #a1e1ff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 5px;
+  width: 40%;
+  height: 44px;
+`;
+
+const CallTitle = styled.span`
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+`;
+
+const TelAtag = styled.a`
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  text-decoration: none;
+  color: black;
+`;
+
+const ReserveBox = styled.div`
+  background-color: #2cbcff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+`;
+
+const ReserveTitle = styled.span`
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+`;
+
+const ReserveBtn = styled.button`
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 2px 6px;
+  font-weight: 700;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 `;
 
 export default App;
