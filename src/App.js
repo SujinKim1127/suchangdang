@@ -110,6 +110,9 @@ const FunctionWrapper = styled.div`
   background-color: white;
   width: 90%;
   padding-bottom: 20px;
+  @media screen and (min-width: 780px) {
+    width: 700px;
+  }
 `;
 
 const CallBox = styled.div`
