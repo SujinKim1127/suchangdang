@@ -7,6 +7,7 @@ import fourth from "./images/004.png";
 import six from "./images/006.png";
 import Map from "./Map";
 import { Container as MapDiv, NavermapsProvider } from "react-naver-maps";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function App() {
   return (
@@ -27,6 +28,15 @@ function App() {
           </ReserveBox>
         </FunctionWrapper>
         <WhiteBox>
+          <Headline1>
+            <Icon
+              icon="gis:poi-alt"
+              width="28"
+              height="28"
+              style={{ color: "#19a8f1", marginBottom: "5px" }}
+            />
+            오시는 길
+          </Headline1>
           <MapWrapper>
             <MapDiv
               style={{
@@ -99,7 +109,7 @@ const FunctionWrapper = styled.div`
   align-items: center;
   background-color: white;
   width: 90%;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 `;
 
 const CallBox = styled.div`
@@ -158,6 +168,13 @@ const ReserveBtn = styled.button`
   display: flex;
   justify-content: center;
   margin-top: 5px;
+`;
+
+const Headline1 = styled.h1`
+  color: #19a8f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default App;
