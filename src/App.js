@@ -140,6 +140,7 @@ const TelAtag = styled.a`
   margin-top: 5px;
   text-decoration: none;
   color: black;
+  font-size: 14px;
 `;
 
 const ReserveBox = styled.div`
