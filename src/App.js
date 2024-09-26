@@ -161,6 +161,10 @@ const ReserveBox = styled.div`
   justify-content: center;
   align-items: center;
   height: 44px;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const ReserveTitle = styled.span`
@@ -180,6 +184,7 @@ const ReserveBtn = styled.button`
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  cursor: pointer;
 `;
 
 const Headline1 = styled.h1`
