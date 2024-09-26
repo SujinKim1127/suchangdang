@@ -8,8 +8,10 @@ import six from "./images/006.png";
 import Map from "./Map";
 import { Container as MapDiv, NavermapsProvider } from "react-naver-maps";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { formatDate } from "./formatDate";
 
 function App() {
+  const date = new Date();
   return (
     <NavermapsProvider ncpClientId={process.env.REACT_APP_NAVER_CLIENT_ID}>
       <Wrapper>
@@ -24,7 +26,13 @@ function App() {
           </CallBox>
           <ReserveBox>
             <ReserveTitle>온라인 예약</ReserveTitle>
-            <ReserveBtn>바로가기</ReserveBtn>
+            <a
+              href={`https://m.booking.naver.com/booking/13/bizes/1226325/items/6144746?area=bmp&service-target=nmap&startDate=${formatDate(
+                date
+              )}&theme=place`}
+            >
+              <ReserveBtn>바로가기</ReserveBtn>
+            </a>
           </ReserveBox>
         </FunctionWrapper>
         <WhiteBox>
